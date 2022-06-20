@@ -1,4 +1,4 @@
-## After working on R to define clones with the accumulated data
+## After working on R to define the threshold (0.1691791) forclones with the accumulated data
 ## I now will parse the sequences before defining clones
 
 ParseDb.py select -d all_db_clean.tab -f locus -u "IGH" \
