@@ -1,0 +1,15 @@
+## Each sample VDJs output from cellranger multi was pre_processed with Immcantantion as follows:
+
+AssignGenes.py igblast -s filtered_contig.fasta -b /n/scratch3/users/c/cc501/rnaseq/refs/igblast \
+--organism mouse --loci ig --format blast
+
+MakeDb.py igblast -i filtered_contig_igblast.fmt7 -s filtered_contig.fasta \
+-r /n/scratch3/users/c/cc501/rnaseq/refs/germlines/imgt/mouse/vdj/imgt_mouse_IG*.fasta --10x filtered_contig_annotations.csv
+
+/home/cc501/.conda/envs/cc501-2021/scripts-immcantation/merge10xnew.py filtered_contig_igblast_db-pass.tsv filtered_contig_annotations.csv 10x_annotated_db-pass.tab
+
+## For each sample the output was changed to I changed the name, e.g.:
+  
+cp 10x_annotated_db-pass.tab BXXMXX_annotated_db-pass.tab
+###
+
